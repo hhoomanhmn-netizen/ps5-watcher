@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="PS5 Watch">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>PS5 Watch</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">🎮</div><div><b>PS5 WATCH</b><small>CANADA · PRICE TRACKER</small></div></div>
+    <span class="status" id="feed-status">NOT CONNECTED</span>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">YOUR TRACKED CONSOLE</div>
+      <h1>PS5 Slim<br><span>Disc Edition · 1TB</span></h1>
+      <p>Tracking new, standalone consoles at three Canadian retailers.</p>
+      <div class="hero-foot"><span>📍 Montreal, Quebec</span><span>CAD</span></div>
+    </section>
+
+    <section class="section-head"><div><div class="eyebrow">RETAILER CHECK</div><h2>Current prices</h2></div><button class="refresh-btn" id="refresh-now" type="button">REFRESH NOW</button></section>
+    <p class="refresh-line">Auto-refresh every 60 seconds · Last checked: <span id="last-checked">Not checked yet</span></p>
+    <div class="retailers">
+      <article class="retailer">
+        <div class="retailer-top"><div class="retailer-logo bestbuy">BEST<br>BUY</div><div class="retailer-name"><b>Best Buy</b><small>Canada</small></div><span class="dot pending">●</span></div>
+        <div class="price" data-price="bestbuy">— <small>CAD</small></div><div class="retailer-foot"><span data-status="bestbuy">No verified price yet</span><a href="https://www.bestbuy.ca/" target="_blank" rel="noopener">Visit store ↗</a></div>
+      </article>
+      <article class="retailer">
+        <div class="retailer-top"><div class="retailer-logo costco">C</div><div class="retailer-name"><b>Costco</b><small>Canada</small></div><span class="dot pending">●</span></div>
+        <div class="price" data-price="bestbuy">— <small>CAD</small></div><div class="retailer-foot"><span data-status="bestbuy">No verified price yet</span><a href="https://www.costco.ca/" target="_blank" rel="noopener">Visit store ↗</a></div>
+      </article>
+      <article class="retailer">
+        <div class="retailer-top"><div class="retailer-logo amazon">a</div><div class="retailer-name"><b>Amazon</b><small>Canada</small></div><span class="dot pending">●</span></div>
+        <div class="price" data-price="bestbuy">— <small>CAD</small></div><div class="retailer-foot"><span data-status="bestbuy">No verified price yet</span><a href="https://www.amazon.ca/" target="_blank" rel="noopener">Visit store ↗</a></div>
+      </article>
+    </div>
+
+    <section class="grid2">
+      <article class="panel"><div class="eyebrow">MONITORING</div><div class="big">Every minute</div><p>Dashboard refresh interval<br><b>60 seconds</b></p><span class="pill">WHEN API IS CONNECTED</span></article>
+      <article class="panel"><div class="eyebrow">PRICE HISTORY</div><div class="big" id="tracked-count">0 / 3</div><p>Retailers with a verified current price.</p><span class="pill">CURRENT SNAPSHOT</span></article>
+    </section>
+
+    <section class="panel alerts">
+      <div class="section-head"><div><div class="eyebrow">ACTIVITY</div><h2>Recent alerts</h2></div><span class="count">0</span></div>
+      <div class="empty"><div class="empty-icon">🔔</div><b>No price changes yet</b><p>Verified price and stock changes will appear here once a data connection is configured.</p></div>
+    </section>
+
+    <section class="panel rules">
+      <div class="eyebrow">TRACKING RULES</div>
+      <ul>
+        <li>New PS5 Slim Disc Edition, 1TB only</li>
+        <li>Standalone console; no bundles</li>
+        <li>Exclude used and refurbished listings</li>
+        <li>Verify seller and product page</li>
+        <li>Notify only when price or availability changes</li>
+      </ul>
+    </section>
+    <p class="disclaimer">The dashboard shows the latest verified price for every retailer, even when the price has not changed. A 60-second refresh checks the connected API; it does not guarantee retailers publish new data every minute. Prices remain blank until a real, permitted retailer data feed is connected.</p>
+  </main>
+  <nav class="bottom-nav"><a class="active" href="#top">▦<small>Dashboard</small></a><a href="#alerts">♧<small>Alerts</small></a><a href="#rules">⚙<small>Rules</small></a></nav>
+  <script src="app.js"></script>
+</body>
+</html>

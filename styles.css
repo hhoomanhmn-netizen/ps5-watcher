@@ -1,0 +1,23 @@
+*{box-sizing:border-box}
+:root{color-scheme:dark;--bg:#000;--card:#080808;--line:#292929;--muted:#aaa;--white:#fff}
+body{margin:0;background:#000;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding-bottom:88px}
+.topbar{height:76px;padding:env(safe-area-inset-top) 20px 0;display:flex;align-items:center;justify-content:space-between;background:#000;border-bottom:1px solid #292929}
+.brand{display:flex;align-items:center;gap:11px}.logo{width:40px;height:40px;background:#fff;color:#000;border-radius:11px;display:grid;place-items:center;font-size:21px}
+.brand b{display:block;letter-spacing:1.5px;font-size:13px}.brand small,.retailer-name small{display:block;color:#aaa;font-size:9px;letter-spacing:1.2px;margin-top:3px}
+.status,.pill{font-size:9px;letter-spacing:.8px;border:1px solid #444;border-radius:30px;padding:7px 9px;color:#ddd}
+main{max-width:720px;margin:auto;padding:22px 16px}.hero{background:#080808;border:1px solid #333;border-radius:18px;padding:23px 21px;margin-bottom:28px}
+.eyebrow{font-size:9px;letter-spacing:1.6px;color:#aaa;font-weight:800}.hero h1{font-size:31px;line-height:1.1;margin:13px 0 10px;letter-spacing:-1px}.hero h1 span{font-size:17px;color:#ccc;letter-spacing:0}
+.hero p{color:#ccc;font-size:13px;line-height:1.5}.hero-foot{display:flex;justify-content:space-between;margin-top:23px;padding-top:14px;border-top:1px solid #333;font-size:11px;color:#ddd}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 1px 13px}.section-head h2{font-size:19px;margin:5px 0 0}
+.refresh-line{font-size:10px;color:#aaa;margin:0 2px 12px}.refresh-btn{background:#fff;color:#000;border:0;border-radius:7px;padding:9px 11px;font-size:9px;font-weight:800;letter-spacing:.6px}
+.retailers{display:grid;gap:11px}.retailer,.panel{background:#080808;border:1px solid #292929;border-radius:14px;padding:15px}
+.retailer-top{display:flex;align-items:center;gap:11px}.retailer-logo{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;font-weight:900;font-size:11px;text-align:center;line-height:1;filter:grayscale(1)}
+.bestbuy,.costco,.amazon{background:#fff;color:#000}.costco,.amazon{font-size:25px}.retailer-name{flex:1}.retailer-name b{font-size:14px}.retailer-name small{letter-spacing:0}
+.dot{font-size:12px;color:#aaa}.price{font-size:29px;font-weight:750;letter-spacing:-1px;margin:15px 0 12px}.price small{font-size:11px;color:#aaa;letter-spacing:0}
+.retailer-foot{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #292929;padding-top:11px;color:#aaa;font-size:10px}.retailer-foot a{color:#fff;text-decoration:underline}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:13px 0}.panel .big{font-size:25px;font-weight:750;margin:13px 0 4px}.panel p{font-size:11px;line-height:1.5;color:#aaa;min-height:34px}
+.count{background:#222;border-radius:20px;padding:5px 9px;color:#ddd;font-size:11px}.empty{text-align:center;padding:27px 10px 20px}.empty-icon{font-size:25px;margin-bottom:10px}.empty b{font-size:13px}.empty p{max-width:280px;margin:7px auto 0;min-height:0}
+.rules{margin-top:13px}.rules ul{padding-left:18px;color:#ddd;font-size:12px;line-height:2}.disclaimer{text-align:center;color:#888;font-size:10px;line-height:1.5;padding:8px 12px}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#000;border-top:1px solid #292929;padding:11px 0 calc(11px + env(safe-area-inset-bottom));backdrop-filter:blur(15px)}
+.bottom-nav a{color:#aaa;text-decoration:none;text-align:center;font-size:18px;min-width:70px}.bottom-nav small{display:block;font-size:9px;margin-top:4px}.bottom-nav .active{color:#fff}
+@media(min-width:600px){.retailers{grid-template-columns:repeat(3,1fr)}.retailer-foot{flex-direction:column}.hero{padding:30px}.hero h1{font-size:38px}}
